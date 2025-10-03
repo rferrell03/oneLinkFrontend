@@ -37,14 +37,14 @@ export default function LinkBox() {
 
 
 
-
     async function handleSubmit(e: React.FormEvent) {
+        const SERVER_API = import.meta.env.VITE_SERVER_API || "localhost:3000"; 
         e.preventDefault();
         setError(null);
         setShortUrl(null);
 
         try {
-            const res = await fetch("http://localhost:3000/api/shorten", {
+            const res = await fetch(`${SERVER_API}/shorten`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ url: input }),
@@ -56,7 +56,7 @@ export default function LinkBox() {
             throw new Error(data.error || "Failed to shorten URL");
             }
 
-            setShortUrl(`http://localhost:3000/api/${data.code}`);
+            setShortUrl(`${SERVER_API.replace(/\/api$/, "")}/api/${data.code}`);
         } catch (err: any) {
             setError(err.message);
         }
