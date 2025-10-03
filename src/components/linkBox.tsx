@@ -38,7 +38,7 @@ export default function LinkBox() {
 
 
     async function handleSubmit(e: React.FormEvent) {
-        const SERVER_API = import.meta.env.VITE_SERVER_API || "localhost:3000"; 
+        const SERVER_API = "https://onelinkbackend-production.up.railway.app/api";
         e.preventDefault();
         setError(null);
         setShortUrl(null);
