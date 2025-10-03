@@ -1,0 +1,94 @@
+:root{
+    --gradient: linear-gradient(to right, #5c2c47, #723b5d, #894a75, #9f5b8f, #b56caa, #be77b7, #c682c3, #cf8dd0, #cd93cf, #cc99ce, #ca9fcc, #c9a5cb, #ca9fcc, #cc99ce, #cd93cf, #cf8dd0, #c682c3, #be77b7, #b56caa, #9f5b8f, #894a75, #723b5d, #5c2c47);
+}
+.urlInputContainer{
+    display: inline-block;
+    border-radius: 12px;
+    background: #00000000;
+    margin-top: 20px;
+    
+
+    a{
+        color:grey;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+}
+
+.urlForm {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.urlInput{
+    width: 30vw;
+    height: 40px;
+    font-size: 20px;
+    padding: 8px;
+    color:white;
+    background-color: #312f2f;
+    border-radius: 4px;
+    border: 3px solid black;
+}
+
+
+input[type=url]:focus{
+    outline: none;
+    border: 3px solid black;
+}
+
+.urlButton {
+    width: 80px;
+    height: 58px;
+    background: #312f2f;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+
+}
+
+.urlButton:hover{
+    color: black;
+    transition: 0.3s;
+}
+
+.urlButton:before {
+    content: '';
+    background:linear-gradient(121deg, rgba(133, 131, 131, 1) 0%, rgba(217, 217, 217, 1) 51%, rgb(155, 150, 150) 98%,rgb(155, 150, 150) 98%,rgba(217, 217, 217, 1) 51%, rgba(133, 131, 131, 1) 0%);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(3px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s normal linear infinite;
+    opacity: 0;
+    transition: opacity .3s;
+    border-radius: 10px;
+}
+
+.urlButton:hover:before{
+    opacity: .85;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0% 0;
+    }
+
+    100% {
+        background-position: -400% 0;
+    }
+
+    
+}
+

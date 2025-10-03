@@ -1,0 +1,24 @@
+.star{
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    overflow: hidden;
+    border-radius: 50%;
+    animation: twinkle 0.5s normal 0s infinite;
+    animation: moveStar linear infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+@keyframes moveStar {
+    0% {
+        transform: translate(-45vw, 0);
+    }
+
+    100% {
+        transform: translate(100vw, 0);
+    }
+}
