@@ -56,7 +56,7 @@ export default function LinkBox() {
             throw new Error(data.error || "Failed to shorten URL");
             }
 
-            setShortUrl(`${SERVER_API.replace(/\/api$/, "")}/api/r/${data.code}`);
+            setShortUrl(`one-link.xyz/${data.code}`);
         } catch (err: any) {
             setError(err.message);
         }

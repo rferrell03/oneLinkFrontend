@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/:code",
+            "destination": "https://api.one-link.xyz/api/r/:code"
+        }
+    ]
+}
