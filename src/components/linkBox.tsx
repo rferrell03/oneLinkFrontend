@@ -38,7 +38,7 @@ export default function LinkBox() {
 
 
     async function handleSubmit(e: React.FormEvent) {
-        const SERVER_API = "https://onelinkbackend-production.up.railway.app/api";
+        const SERVER_API = "https://api.one-link.xyz/api";
         e.preventDefault();
         setError(null);
         setShortUrl(null);
@@ -56,7 +56,7 @@ export default function LinkBox() {
             throw new Error(data.error || "Failed to shorten URL");
             }
 
-            setShortUrl(`${SERVER_API.replace(/\/api$/, "")}/api/${data.code}`);
+            setShortUrl(`${SERVER_API.replace(/\/api$/, "")}/api/r/${data.code}`);
         } catch (err: any) {
             setError(err.message);
         }
