@@ -22,7 +22,7 @@ export default function LinkBox() {
 
             {shortUrl && (
                 <p> Short URL:{" "}
-                    <a href={shortUrl} target="_blank" rel="noreferrer">
+                    <a href={`https://${shortUrl}`} target="_blank" rel="noreferrer">
                         {shortUrl}
                     </a>
                 </p>
